@@ -7,7 +7,7 @@
 
 ## www中为打包后的前端文件
 
-使用Vue框架进行编写,使用axios库进行网络请求
+前端文件采用Vue框架进行编写,使用axios库向后端api进行网络请求,采用element-UI组件库进行样式的优化,使用VueRouter实现前端路由
 
 ## 运行方式
 
@@ -20,3 +20,11 @@
 bus-management.sql用来创建数据库、数据表以及导入示例数据
 
 在sql.config.js里面写用来连接mysql的配置文件
+
+## 需要准备的环境
+
+1. mysql数据库（需要运行提供的bus-management.sql文件,并根据需要修改数据库连接配置文件sql.config.js）
+
+2. node.js（运行server.js文件）
+
+
