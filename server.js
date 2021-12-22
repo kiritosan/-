@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+let options = require('./sql.config')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -22,12 +23,7 @@ app.all('*', function(req, res, next) {
 // sql单参数 查询 sql和valueArr同时传入 插入
 // 要传入cb只能传入三个参数
 function useSql(sql, obj, cb, res) {
-  let connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password: 'root',
-    database : 'test'
-  });
+  let connection = mysql.createConnection(options);
 
   connection.connect();
   
