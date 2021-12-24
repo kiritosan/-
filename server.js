@@ -4,6 +4,7 @@ const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 let options = require('./sql.config')
+let openUrl = require('./openUrl')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -189,8 +190,9 @@ app.post('/selectbrinfoatsometimebymotercade', function (req, res) {
   }, res) 
 });
 
-var server = app.listen(3000, function () {
-  var port = server.address().port;
+let server = app.listen(3000, function () {
+  let port = server.address().port;
 
-  console. log('Listening at http://localhost:%s ', port);
+  console. log('Listening at http://localhost:%s', port);
+  openUrl('http://localhost:3000');
 }); 
