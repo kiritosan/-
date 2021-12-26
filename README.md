@@ -28,3 +28,4 @@ bus-management.sql用来创建数据库、数据表以及导入示例数据
 2. node.js（运行server.js文件）
 
 
+增加win下打包文件, 直接双击bus-management.exe文件即可在windows下运行
