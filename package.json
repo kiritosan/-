@@ -9,5 +9,10 @@
     "express-static": "^1.2.6",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.15"
+  },
+  "name": "bus-management",
+  "bin": "server.js",
+  "pkg": {
+    "assets": ["www/**/*", ""]
   }
 }

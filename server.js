@@ -3,12 +3,13 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const path = require('path');
 let options = require('./sql.config')
 let openUrl = require('./openUrl')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(express.static('www'));
+app.use(express.static(path.join(__dirname, 'www')));
 
 // 设置跨域
 app.all('*', function(req, res, next) {
